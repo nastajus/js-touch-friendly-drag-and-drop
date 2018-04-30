@@ -1,0 +1,17 @@
+<script src="styles.css"></script>
+
+<div id="draggable"></div>
+
+<script>
+
+    var draggable = document.getElementById('draggable');
+    draggable.addEventListener('touchmove', function(event) {
+    	var touch = event.targetTouches[0];
+
+    	//place element where the finger is
+        draggable.style.left = touch.pageX-25 + 'px';
+        draggable.style.top = touch.pageY-25 + 'px';
+
+        event.preventDefault();
+    }, false);
+</script>
